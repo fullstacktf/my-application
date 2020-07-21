@@ -1,0 +1,54 @@
+{
+  "name": "my-application",
+  "version": "1.0.0",
+  "description": "Basic boilerplate project with JavaScript",
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 12.13.0"
+  },
+  "contributors": [
+    "Daniel Ramos <danielramosacosta@hotmail.com>",
+    "Rubén Moya <ruben@acidtango.com>"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "build": "babel src -x .js -d build",
+    "start": "node build/app.js",
+    "start:dev": "nodemon --exec babel-node src/app.js",
+    "lint": "eslint --ext .js ./src",
+    "lint:fix": "eslint --ext .js --fix ./src",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "clean": "rimraf coverage build tmp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "7.10.4",
+    "babel-jest": "26.1.0",
+    "eslint": "7.5.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "jest": "26.1.0",
+    "nodemon": "^2.0.4",
+    "prettier": "2.0.5",
+    "rimraf": "3.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleDirectories": [
+      "./node_modules",
+      "./src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  }
+}
